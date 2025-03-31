@@ -5,6 +5,9 @@ body {
     background-image: url('tlo.jpg');
     background-size: cover;
     background-position: center;
+    min-height: 100vh; /* Minimalna wysokość dla całej strony */
+    display: flex;
+    flex-direction: column; /* Układ pionowy dla strony */
 }
 
 header {
@@ -36,13 +39,13 @@ nav a:hover {
     height: 500px;
 }
 
-
 footer {
     display: flex;
     justify-content: center;
     gap: 20px;
     padding: 20px;
     background: rgba(0, 0, 0, 0.7);
+    margin-top: auto; /* Wypycha stopkę na dół strony */
 }
 
 footer img {
