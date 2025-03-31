@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Strona</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Logo strony" class="logo">
+        <nav>
+            <a href="podstrona1.html">Podstrona 1</a>
+            <a href="podstrona2.html">Podstrona 2</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="stream-container">
+            <!-- Osadzony odtwarzacz Twitch -->
+            <div id="twitch-player"></div>
+
+            <!-- Miejsce na czat Twitch -->
+            <div id="twitch-chat"></div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://www.tiktok.com/@majsterrelaksu"><img src="image-1.png" alt="Obraz 1"></a>
+        <a href="https://link2.com"><img src="obraz2.jpg" alt="Obraz 2"></a>
+        <a href="https://link3.com"><img src="obraz3.jpg" alt="Obraz 3"></a>
+    </footer>
+
+    <script>
+        // Osadzanie playera Twitcha
+        var playerOptions = {
+            width: 800,
+            height: 500,
+            channel: "MajsterRelaksu",
+            parent: ["127.0.0.1"]
+        };
+        var player = new Twitch.Player("twitch-player", playerOptions);
+        player.setVolume(0.5);
+
+        // Osadzanie chatu Twitcha dynamicznie
+        var chatDiv = document.getElementById("twitch-chat");
+        var chatIframe = document.createElement("iframe");
+        chatIframe.src = "https://www.twitch.tv/embed/MajsterRelaksu/chat?parent=https://localhost";
+        chatIframe.width = "350";
+        chatIframe.height = "500";
+        chatDiv.appendChild(chatIframe);
+    </script>
+
+</body>
+</html>
