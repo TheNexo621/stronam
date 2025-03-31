@@ -1,1 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('tlo.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Minimalna wysokość dla całej strony */
+    display: flex;
+    flex-direction: column; /* Układ pionowy dla strony */
+}
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+}
