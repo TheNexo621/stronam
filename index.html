@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moja Strona</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 </head>
 <body>
 
@@ -20,10 +19,23 @@
     <main>
         <section class="stream-container">
             <!-- Osadzony odtwarzacz Twitch -->
-            <div id="twitch-player"></div>
+            <iframe
+                id="twitch-player"
+                src="https://player.twitch.tv/?channel=MajsterRelaksu&parent=TheNexo621.github.io"
+                width="800"
+                height="500"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
 
-            <!-- Miejsce na czat Twitch -->
-            <div id="twitch-chat"></div>
+            <!-- Osadzony czat Twitch -->
+            <iframe
+                id="twitch-chat"
+                src="https://www.twitch.tv/embed/MajsterRelaksu/chat?parent=TheNexo621.github.io"
+                width="350"
+                height="500"
+                frameborder="0">
+            </iframe>
         </section>
     </main>
 
@@ -32,26 +44,6 @@
         <a href="https://link2.com"><img src="obraz2.jpg" alt="Obraz 2"></a>
         <a href="https://link3.com"><img src="obraz3.jpg" alt="Obraz 3"></a>
     </footer>
-
-    <script>
-        // Osadzanie playera Twitcha
-        var playerOptions = {
-            width: 800,
-            height: 500,
-            channel: "MajsterRelaksu",
-            parent: ["127.0.0.1"]
-        };
-        var player = new Twitch.Player("twitch-player", playerOptions);
-        player.setVolume(0.5);
-
-        // Osadzanie chatu Twitcha dynamicznie
-        var chatDiv = document.getElementById("twitch-chat");
-        var chatIframe = document.createElement("iframe");
-        chatIframe.src = "https://www.twitch.tv/embed/MajsterRelaksu/chat?parent=127.0.0.1";
-        chatIframe.width = "350";
-        chatIframe.height = "500";
-        chatDiv.appendChild(chatIframe);
-    </script>
 
 </body>
 </html>
