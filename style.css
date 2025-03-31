@@ -79,7 +79,7 @@ footer img:hover {
 .tlo {
     height: 100vh; /* Wysokość na całe okno przeglądarki */
     margin: 0; /* Brak marginesów */
-    background-image: url('twoj-obrazek.jpg'); /* Ścieżka do obrazu tła */
+    background-image: url('tłostrona.jpg'); /* Ścieżka do obrazu tła */
     background-size: cover; /* Dopasowanie tła */
     background-position: center; /* Wyśrodkowanie obrazu */
     background-repeat: no-repeat; /* Bez powtarzania obrazu */
