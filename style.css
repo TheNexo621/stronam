@@ -78,7 +78,7 @@ footer img:hover {
 
 .tlo {
     flex: 1; /* Wypełnia pozostałą przestrzeń */
-    background-image: url('twoj-obrazek.jpg');
+    background-image: url('tłostrona.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
